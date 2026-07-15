@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <footer className="bg-primary text-white pt-24 pb-12">
@@ -89,19 +87,17 @@ export default function Footer() {
             <h4 className="font-bold text-xs uppercase tracking-[0.2em] mb-10 text-white">
               Lokasi Showroom
             </h4>
-            <div className="relative h-44 rounded-2xl overflow-hidden glass-dark group">
-              <Image
-                alt="Map"
-                className="object-cover opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwSof-HHIU8juXMl5lUMxEUscIAp7pQXStVwsXXfrEg2vrkbEEP5PsICvxQZJRcTZY8DS4aUWdGsrnQkoKLoUdkybdXrsXt-DA0Fjh1K99Mc2x5KzWCAZfyJ7yGPs0pDLhtMaIbfD3QyH9_nCfpJpbS82FTIljX-3zEDvaVAFU7NQMY-PMxcFygLpgw2TXHEZsjH0Mz3txAgGi1bxA8vxMb03IYgqG1KQWJnd282DwOfwXAJxZQ75Z"
-                fill
-                unoptimized
+            <div className="rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8674112333956!2d106.88471961088854!3d-6.148503460244549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f58254194cdb%3A0xa2ece092203148ea!2sJMK%20AUTO%20GALLERY!5e0!3m2!1sid!2sid!4v1784112456277!5m2!1sid!2sid"
+                width="400"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="w-full h-44 rounded-2xl"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-white text-primary text-[10px] uppercase font-bold px-5 py-2 rounded-full shadow-xl">
-                  Buka di Maps
-                </button>
-              </div>
             </div>
           </div>
         </div>
