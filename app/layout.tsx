@@ -17,20 +17,35 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jmkautogallery.com"),
   title: {
-    default: "JMK Auto Gallery | Mobil Bekas Premium Jakarta Utara",
+    default: "JMK Auto Gallery | Showroom Mobil Mewah & Premium Bekas Jakarta Utara",
     template: "%s | JMK Auto Gallery",
   },
   description:
-    "Kurasi eksklusif kendaraan premium di Jakarta Utara. Inspeksi 200+ titik, garansi mesin, dan transparansi digital. Temukan mobil impian Anda.",
+    "Showroom mobil mewah & premium bekas terpercaya di Jakarta Utara. Toyota Alphard, BMW, Mercedes-Benz, Land Cruiser, dan unit premium lainnya. Inspeksi 200+ titik, garansi mesin, harga terbaik.",
   keywords: [
-    "mobil bekas premium",
-    "mobil bekas jakarta utara",
-    "dealer mobil jakarta",
+    "showroom mobil mewah",
+    "showroom mobil premium",
     "mobil mewah bekas",
-    "JMK Auto Gallery",
+    "mobil premium bekas jakarta",
+    "dealer mobil mewah jakarta",
+    "showroom mobil bekas jakarta utara",
+    "jual mobil mewah bekas",
+    "beli mobil premium",
+    "Toyota Alphard bekas",
+    "BMW bekas jakarta",
+    "Mercedes-Benz bekas",
+    "Land Cruiser bekas",
     "mobil bekas terpercaya",
-    "inspeksi mobil",
+    "showroom mobil jakarta",
+    "inspeksi mobil bekas",
     "garansi mobil bekas",
+    "JMK Auto Gallery",
+    "mobil bekas premium Jakarta Utara",
+    "dealer mobil premium jakarta utara",
+    "jual beli mobil mewah",
+    "tukar tambah mobil mewah",
+    "kredit mobil mewah bekas",
+    "simulasi kredit mobil bekas",
   ],
   authors: [{ name: "JMK Auto Gallery" }],
   creator: "JMK Auto Gallery",
@@ -39,23 +54,23 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "https://jmkautogallery.com",
     siteName: "JMK Auto Gallery",
-    title: "JMK Auto Gallery | Mobil Bekas Premium Jakarta Utara",
+    title: "JMK Auto Gallery | Showroom Mobil Mewah & Premium Bekas Jakarta Utara",
     description:
-      "Kurasi eksklusif kendaraan premium di Jakarta Utara. Inspeksi 200+ titik, garansi mesin, dan transparansi digital.",
+      "Showroom mobil mewah & premium bekas terpercaya di Jakarta Utara. Inspeksi 200+ titik, garansi mesin, dan harga terbaik. Toyota Alphard, BMW, Mercedes-Benz, Land Cruiser.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "JMK Auto Gallery",
+        alt: "JMK Auto Gallery - Showroom Mobil Mewah Jakarta Utara",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JMK Auto Gallery | Mobil Bekas Premium Jakarta Utara",
+    title: "JMK Auto Gallery | Showroom Mobil Mewah & Premium Bekas Jakarta Utara",
     description:
-      "Kurasi eksklusif kendaraan premium di Jakarta Utara. Inspeksi 200+ titik, garansi mesin, dan transparansi digital.",
+      "Showroom mobil mewah & premium bekas terpercaya di Jakarta Utara. Inspeksi 200+ titik, garansi mesin, dan harga terbaik.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -84,6 +99,7 @@ export default function RootLayout({
       lang="id"
       className={`${montserrat.variable} ${inter.variable} antialiased`}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <head>
         {/* eslint-disable-next-line @next/next/google-font-display, @next/next/no-page-custom-font */}
