@@ -35,6 +35,7 @@ export default function BrandLogos() {
                   alt={`${brand.name} logo`}
                   width={brand.large ? 176 : 80}
                   height={brand.large ? 176 : 80}
+                  style={{ width: "auto", height: "auto" }}
                   className="w-full h-full object-contain"
                   unoptimized
                 />
