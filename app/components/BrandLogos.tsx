@@ -1,6 +1,27 @@
 import React from "react";
 import Image from "next/image";
 
+function MercedesLogo() {
+  return (
+    <svg viewBox="0 0 100 100" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" stroke="#0F172A" strokeWidth="3" />
+      <path d="M50 10 L50 50 L20 78" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M50 50 L80 78" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M50 10 L20 78" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function LexusLogo() {
+  return (
+    <svg viewBox="0 0 100 100" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="50" rx="46" ry="40" stroke="#0F172A" strokeWidth="3" />
+      <path d="M50 20 C35 20, 25 35, 25 50 C25 65, 35 80, 50 80 C55 80, 58 78, 60 75" stroke="#0F172A" strokeWidth="4" strokeLinecap="round" fill="none" />
+      <path d="M60 75 L65 85" stroke="#0F172A" strokeWidth="4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const brands = [
   {
     name: "Toyota",
@@ -20,7 +41,7 @@ const brands = [
   {
     name: "Mercedes-Benz",
     origin: "Germany",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Mercedes-Benz_free_logo.svg/240px-Mercedes-Benz_free_logo.svg.png",
+    custom: "mercedes",
   },
   {
     name: "Mitsubishi",
@@ -30,7 +51,7 @@ const brands = [
   {
     name: "Lexus",
     origin: "Japan",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lexus_logo_2014.svg/240px-Lexus_logo_2014.svg.png",
+    custom: "lexus",
   },
   {
     name: "Porsche",
@@ -62,14 +83,20 @@ export default function BrandLogos() {
               className="group flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-2.5 sm:gap-3 lg:gap-2.5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-secondary/40 hover:-translate-y-1 transition-all duration-300 cursor-default"
             >
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                <Image
-                  src={brand.logoUrl}
-                  alt={`${brand.name} logo`}
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-contain"
-                  unoptimized
-                />
+                {brand.custom === "mercedes" ? (
+                  <MercedesLogo />
+                ) : brand.custom === "lexus" ? (
+                  <LexusLogo />
+                ) : (
+                  <Image
+                    src={brand.logoUrl}
+                    alt={`${brand.name} logo`}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                    unoptimized
+                  />
+                )}
               </div>
 
               <div className="flex flex-col items-center text-center">
