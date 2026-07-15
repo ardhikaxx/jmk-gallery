@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
@@ -129,7 +128,6 @@ export default async function CarDetail({ params }: { params: Promise<{ slug: st
   if (!car) {
     return (
       <>
-        <Header />
         <main className="min-h-screen bg-mesh flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-primary mb-4">404</h1>
@@ -146,7 +144,6 @@ export default async function CarDetail({ params }: { params: Promise<{ slug: st
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-mesh">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <Breadcrumbs items={[{ label: "Katalog", href: "/katalog" }, { label: car.name }]} />
