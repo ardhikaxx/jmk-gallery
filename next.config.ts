@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "vl.imgix.net" },
       { protocol: "https", hostname: "cdn.simpleicons.org" },
       { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "download.logo.wine" },
     ],
   },
 };
