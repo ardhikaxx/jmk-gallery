@@ -98,7 +98,8 @@ export default function Header() {
 
         {/* Right Side */}
         <div className="flex items-center gap-2">
-          <button
+          <a
+            href="/katalog"
             className={`hidden md:block px-6 py-2 rounded-xl font-(family-name:--font-inter) text-sm transition-all duration-300 ${
               isPastHero
                 ? "bg-primary text-white hover:opacity-90"
@@ -106,7 +107,7 @@ export default function Header() {
             }`}
           >
             Cari Mobil
-          </button>
+          </a>
           {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(true)}
@@ -160,7 +161,15 @@ export default function Header() {
                 </a>
               ))}
             </nav>
-            <div className="mt-12 pt-8 border-t border-white/10">
+            <div className="mt-12 pt-8 border-t border-white/10 space-y-4">
+              <a
+                href="/katalog"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center justify-center gap-3 bg-white text-primary py-3 rounded-xl text-sm font-bold"
+              >
+                <span className="material-symbols-outlined">search</span>
+                Cari Mobil
+              </a>
               <a
                 href="https://wa.me/6281234567890"
                 target="_blank"
