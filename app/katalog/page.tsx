@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 interface Car {
   slug: string;
@@ -94,6 +95,7 @@ export default function KatalogPage() {
     <main className="min-h-screen bg-mesh">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 pt-32 pb-20">
         {/* Header */}
+        <Breadcrumbs items={[{ label: "Katalog" }]} />
         <div className="mb-12">
           <h1 className="font-(family-name:--font-montserrat) text-primary text-3xl md:text-4xl font-bold mb-3">
             Katalog Mobil
