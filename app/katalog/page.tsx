@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 interface Car {
@@ -92,7 +94,9 @@ export default function KatalogPage() {
   });
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <>
+      <Header />
+      <main className="min-h-screen bg-mesh">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 pt-32 pb-20">
         {/* Header */}
         <Breadcrumbs items={[{ label: "Katalog" }]} />
@@ -199,6 +203,8 @@ export default function KatalogPage() {
           </div>
         )}
       </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
